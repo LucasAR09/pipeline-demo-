@@ -1,5 +1,5 @@
 function greetUser(name) {
-  return `Hola ${name}, el pipeline está funcionando correctamente`;
+  return `Hola ${name}, el pipeline está funcionando correctamente `;
 }
 
 console.log(greetUser("usuario"));
