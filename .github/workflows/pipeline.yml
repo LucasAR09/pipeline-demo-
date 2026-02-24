@@ -33,18 +33,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-    - name: Simulate deployment
-  run: |
-    echo "Starting deployment..."
-    rm -rf deploy
-    mkdir -p deploy
-    cp app.js test.js package.json deploy/
-    echo "Application deployed successfully!"
-    echo "----------------------------------"
-    echo "Timestamp: $(date)"
-    echo "Branch: $GITHUB_REF"
-    echo "Commit: $GITHUB_SHA"
-    echo "----------------------------------"
+      - name: Simulate deployment
+        run: |
+          echo "Starting deployment..."
+          rm -rf deploy
+          mkdir -p deploy
+          cp app.js test.js package.json deploy/
+          echo "Application deployed successfully!"
+          echo "----------------------------------"
+          echo "Timestamp: $(date)"
+          echo "Branch: $GITHUB_REF"
+          echo "Commit: $GITHUB_SHA"
+          echo "----------------------------------"
 
       - name: Notify team
         run: echo "Deployment completed successfully!"
